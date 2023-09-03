@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body{
+  background-color: hsl(210, 46%, 95%);
+  /* background: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat; */
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+.container{
+  width:80%;
+  margin:0 auto;
+  display: grid;
+  grid-template-areas: "a a b e"
+                       "c d d e";
+  grid-template-rows: 40%% 40%;
+  grid-template-columns: repeat(4, 1fr);
+  gap:1rem;
+  box-shadow: 0.3em 0.3em 0.5em hsl(217, 19%, 60%);
+}
+
+.testimonial{
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  padding: 0 1rem ;
+}
+.testimonial:nth-of-type(1){
+  background-color:hsl(263, 55%, 52%);
+  grid-area: a;
+}
+.testimonial:nth-of-type(2){
+  background-color: hsl(217, 19%, 35%);
+  grid-area: b;
+}
+.testimonial:nth-of-type(3){
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  grid-area: c;
+}
+.testimonial:nth-of-type(4){
+  background-color: hsl(219, 29%, 14%);
+  color:(0, 0%, 100%);
+  grid-area: d;
+}
+.testimonial:nth-of-type(5){
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  grid-area: e;
+}
+
+.img-container img{
+  border-radius: 50%;
+}
+.verified{
+  opacity: 50%;
+}
+.name{
+  font-weight: 600;
+}
+.review{
+  opacity:70%;
+}
+.title{
+  font-weight: 600;
+  font-size:20px;
+}
+.img-container{
+  display:flex;
+  flex-direction: row;
+  gap:1rem;
+}
+
+.person{
+  line-height: 0.3rem;
+}
+.content{
+  margin: 0 auto;
+  padding: 1rem;
+}
+.quote{
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin:1rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width:375px) and (max-width:800px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width:801px) and (max-width:1199px) {
+  .container{
+    width:100%;
+    margin:0 auto;
+    display: grid;
+    grid-template-areas: "a a b"
+                         "c d d"
+                         "e e e";
+    grid-template-rows:repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+  }
+}
